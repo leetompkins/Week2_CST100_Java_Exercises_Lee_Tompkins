@@ -1,7 +1,9 @@
-/* Account class 
- * Date Jun 3 2016
+/* Summary: An Account class with getters, setters for balance, ID, annual interest rate,
+ * and date the account was created.
+ * Date June 3 2016
  * Author Lee Tompkins
  * File Account.java
+ * Week2 Exercise 9.7
  */
 public class Account {
 	
@@ -14,32 +16,38 @@ public class Account {
 	private double balance;
 	private double annualInterestRate;
 	private long dateCreated = date.getTime();
-	
-	// Variable getters 
+	 
 	
 	int getID() {
+		// Get ID
 		return id;
 	}
 	double getBalance() {
+		// Get balance
 		return balance;
 	}
 	double getAnnualInterestRate() {
+		// get annual interest rate
 		return annualInterestRate;
 	}
 	long getDateCreated() {
+		// get date created 
 		return dateCreated;
 	}
-	// Variable setters 
 	public void setID(int newID) {
-		id = newID;
+		// set ID
+		this.id = newID;
 	}
 	public void setBalance(double newBalance) {
-		balance = newBalance;
+		// Set balance
+		this.balance = newBalance;
 	}
 	public void setAnnualInterestRate(double newAnnualInterestRate) {
-		annualInterestRate = newAnnualInterestRate;
+		// set annual interest rate
+		this.annualInterestRate = newAnnualInterestRate;
 	}
 	double getMonthlyInterestRate() {
+		// get monthly interest rate
 		return annualInterestRate / 12;
 	}
 	double getMonthlyInterest() {
@@ -63,6 +71,7 @@ public class Account {
 	}
 	
 	Account(int id, double balance){ // specified constructor
-		
+		this.id = id;
+		this.balance = balance;
 	}
 }
